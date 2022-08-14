@@ -1,0 +1,138 @@
+<script>
+  import Button from "./Button.svelte";
+  import Logos from "./Logos.svelte";
+  import { toast } from "@zerodevx/svelte-toast";
+  import { viewState } from "./stores.js";
+  import { getOrders, getProfile } from "./requests";
+
+  let token = "";
+
+  const startAnalyse = async () => {
+    localStorage.setItem("token", `Bearer ${token}`);
+    if (localStorage.getItem("token")?.length > 0) {
+      await getProfile();
+      await getOrders();
+    }
+    if (!localStorage.getItem("token")) {
+      viewState.update(() => 0);
+      toast.push("خطا در دریافت اطلاعات، دوباره توکن را بررسی کنید", {
+        theme: {
+          "--toastBackground": "#F56565",
+          "--toastBarBackground": "#C53030",
+        },
+      });
+    }
+  };
+</script>
+
+<div class="steps">
+  <h1>«دریافت گزارش حساب کاربری اسنپ‌فود»</h1>
+  <div class="step">
+    <span class="step-number">اول</span>
+    <p>آیکن بادمجان را بکشید و به نوار Bookmark کروم اضافه کنید</p>
+    <a
+      class="bookmark"
+      title="Biainobokhor"
+      href="javascript:(function()%7B(function()%7Bfunction%20getCookie(name)%20%7Bvar%20value%20%3D%20%60%3B%20%24%7Bdocument.cookie%7D%60%3Bvar%20parts%20%3D%20value.split(%60%3B%20%24%7Bname%7D%3D%60)%3Bif%20(parts.length%20%3D%3D%3D%202)%20return%20parts.pop().split('%3B').shift()%3B%7Dvar%20token%20%3D%20getCookie('jwt-access_token')%3Bif(token)%20%7Bnavigator.clipboard.writeText(token).then(function()%20%7Balert('Token%20has%20been%20copied%20successfully')%3B%7D%2C%20function(err)%20%7Bconsole.error('Async%3A%20Could%20not%20copy%20text%3A%20'%2C%20err)%3B%7D)%3B%7D%7D)()%7D)()"
+      >🍆</a
+    >
+  </div>
+  <div class="step">
+    <span class="step-number">دوم</span>
+    <p>
+      سایت <a href="https://snappfood.ir/" target="_blank">اسنپ‌فود</a> را باز کنید
+      و وارد حساب کاربری خود شوید
+    </p>
+  </div>
+  <div class="step">
+    <span class="step-number">سوم</span>
+    <p>روی «بوک‌مارک» کلیک کنید تا توکن کپی شود</p>
+  </div>
+  <div class="step">
+    <span class="step-number">چهارم</span>
+    <p>توکن کپی شده را در بخش زیر Paste کنید</p>
+    <input type="text" bind:value={token} placeholder="Paste the token" />
+  </div>
+  <Button text="شروع بررسی" click={startAnalyse} full color="black" />
+</div>
+<Logos />
+
+<style>
+  .steps {
+    max-width: 720px;
+    width: 98%;
+    line-height: 1.6;
+    margin: 0 auto;
+  }
+
+  .steps h1 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .step {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 24px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .step:last-child {
+    margin-bottom: 0;
+  }
+
+  .step p {
+    flex: 1;
+  }
+
+  .step input {
+    direction: ltr;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f2f4f6;
+    border-radius: 24px;
+    border: 1px solid transparent;
+    height: 46px;
+    outline: none;
+    padding: 0 16px;
+    transition: 0.3s;
+  }
+
+  .step input:focus {
+    background-color: #fff;
+    border: 1px solid #c1c4c9;
+  }
+
+  .step-number {
+    background-color: #111;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-left: 20px;
+  }
+
+  .bookmark {
+    display: inline-block;
+    font-size: 24px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(239, 242, 245);
+    border-radius: 16px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+  }
+</style>

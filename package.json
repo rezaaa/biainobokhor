@@ -1,0 +1,23 @@
+{
+  "name": "biainobokhor2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "svelte": "^3.49.0",
+    "svelte-loading-spinners": "^0.1.7",
+    "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "@zerodevx/svelte-toast": "^0.7.2",
+    "dayjs": "^1.11.3",
+    "html2canvas": "^1.4.1",
+    "jalaliday": "^2.3.0"
+  }
+}

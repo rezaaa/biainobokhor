@@ -1,0 +1,67 @@
+@font-face {
+  font-family: peyda;
+  src: url('./assets/fonts/peyda/eot/PeydaWeb-Medium.eot?v=1.1.0');
+  src: url('./assets/fonts/peyda/eot/PeydaWeb-Medium.eot?v=1.1.0#iefix') format('embedded-opentype'),
+       url('./assets/fonts/peyda/woff/PeydaWeb-Medium.woff?v=1.1.0') format('woff'),
+       url('./assets/fonts/peyda/woff2/PeydaWeb-Medium.woff2?v=1.1.0') format('truetype');
+  font-weight: normal;
+}    
+
+@font-face {
+  font-family: peyda;
+  src: url('./assets/fonts/peyda/eot/PeydaWeb-Bold.eot?v=1.1.0');
+  src: url('./assets/fonts/peyda/eot/PeydaWeb-Bold.eot?v=1.1.0#iefix') format('embedded-opentype'),
+       url('./assets/fonts/peyda/woff/PeydaWeb-Bold.woff?v=1.1.0') format('woff'),
+       url('./assets/fonts/peyda/woff2/PeydaWeb-Bold.woff2?v=1.1.0') format('truetype');
+  font-weight: bold;
+}
+
+/* @font-face {
+  font-family: peyda;
+  src: url('./assets/fonts/Vazirmatn-Light.woff2') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: peyda;
+  src: url('./assets/fonts/Vazirmatn-Regular.woff2') format('truetype');
+  font-weight: bold;
+} */
+
+:root {
+  font-family: peyda;
+  color: #19191b;
+  font-size: 16px;
+  direction: rtl;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --toastContainerTop: auto;
+  --toastContainerRight: auto;
+  --toastContainerBottom: 2rem;
+  --toastContainerLeft: calc(50vw - 15rem);
+  --toastBorderRadius: 12px;
+  --toastWidth: 30rem;
+  --toastPadding: 0 0.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  font-weight: 500;
+  color: #008ffd;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #0583f1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
