@@ -1,7 +1,7 @@
 # netlify.toml
 [[redirects]]
 from = '/order/*'
-to = 'https://sazito.com:splat'
+to = 'https://snappfood.ir/mobile/v1/:splat'
 status = 200
 force = true
 
