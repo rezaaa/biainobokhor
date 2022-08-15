@@ -42,7 +42,7 @@ export const getProfile = async () => {
 export const getOrders = async ({ page = 14, size = 100 } = {}) => {
   loadingState.update(() => true);
   return await fetch(
-    `/order/reorder?page=${page}&size=${size}`,
+    `/order`,
     {
       headers: {
         authorization: localStorage.getItem("token"),
