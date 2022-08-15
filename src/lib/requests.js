@@ -8,7 +8,7 @@ import {
 export const getProfile = async () => {
   loadingState.update(() => true);
   return await fetch(
-    "https://murmuring-tundra-31743.herokuapp.com/snappfood/v2/user/load?optionalClient=WEBSITE&client=WEBSITE&deviceType=WEBSITE&appVersion=8.1.1&UDID=REZ&locale=fa",
+    "https://murmuring-tundra-31743.herokuapp.com/v2/user/load?optionalClient=WEBSITE&client=WEBSITE&deviceType=WEBSITE&appVersion=8.1.1&UDID=REZ&locale=fa",
     {
       method: "post",
       headers: {
@@ -42,7 +42,7 @@ export const getProfile = async () => {
 export const getOrders = async ({ page = 14, size = 100 } = {}) => {
   loadingState.update(() => true);
   return await fetch(
-    `https://murmuring-tundra-31743.herokuapp.com/snappfood/v1/order/reorder?page=${page}&size=${size}`,
+    `https://murmuring-tundra-31743.herokuapp.com/v1/order/reorder?page=${page}&size=${size}`,
     {
       headers: {
         authorization: localStorage.getItem("token"),
