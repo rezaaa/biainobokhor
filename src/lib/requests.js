@@ -39,7 +39,7 @@ export const getProfile = async () => {
     });
 };
 
-export const getOrders = async ({ page = 0, size = 500 } = {}) => {
+export const getOrders = async ({ page = 0, size = 250 } = {}) => {
   loadingState.update(() => true);
   return await fetch(
     `https://cors-anywhere-bib.herokuapp.com/https://snappfood.ir/mobile/v1/order/reorder?page=${page}&size=${size}`,
