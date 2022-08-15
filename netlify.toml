@@ -1,0 +1,15 @@
+# netlify.toml
+[[redirects]]
+force = true
+from = '/order'
+status = 200
+to = 'https://snappfood.ir/mobile/v1/:splat'
+
+[[redirects]]
+from = '/*'
+status = 200
+to = '/index.html'
+
+[build]
+command = 'yarn build'
+publish = 'dist'
