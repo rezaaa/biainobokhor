@@ -1,9 +1,9 @@
 # netlify.toml
 [[redirects]]
-force = true
 from = '/order'
+to = 'https://snappfood.ir/mobile/v1/order/reorder?page=1&size=10/:splat'
 status = 200
-to = 'https://snappfood.ir/mobile/v1/order/reorder?page=1&size=10'
+force = true
 
 [[redirects]]
 from = '/*'
