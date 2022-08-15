@@ -1,2 +1,3 @@
-/api/* https://friendly-brioche-f1a414.netlify.app/:splat 200
+/order/* https://biainobokhor.netlify.app/:splat 200
+/user/* https://biainobokhor.netlify.app/:splat 200
 /* /index.html 200    
