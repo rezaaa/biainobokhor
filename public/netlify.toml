@@ -3,4 +3,3 @@
   to = ":splat"
   status = 200
   force = true
-  headers = {Access-Control-Allow-Origin = "*"}
