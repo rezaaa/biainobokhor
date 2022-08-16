@@ -8,7 +8,7 @@ import {
 export const getProfile = async () => {
   loadingState.update(() => true);
   return await fetch(
-    "https://cors-anywhere-bib.herokuapp.com/https://snappfood.ir/mobile/v2/user/load?optionalClient=WEBSITE&client=WEBSITE&deviceType=WEBSITE&appVersion=8.1.1&UDID=REZ&locale=fa",
+    "https://demoz.app/bib/v2/user/load?optionalClient=WEBSITE&client=WEBSITE&deviceType=WEBSITE&appVersion=8.1.1&UDID=REZ&locale=fa",
     {
       method: "post",
       headers: {
@@ -42,7 +42,7 @@ export const getProfile = async () => {
 export const getOrders = async ({ page = 0, size = 250 } = {}) => {
   loadingState.update(() => true);
   return await fetch(
-    `https://cors-anywhere-bib.herokuapp.com/https://snappfood.ir/mobile/v1/order/reorder?page=${page}&size=${size}`,
+    `https://demoz.app/bib/v1/order/reorder?page=${page}&size=${size}`,
     {
       headers: {
         authorization: localStorage.getItem("token"),
