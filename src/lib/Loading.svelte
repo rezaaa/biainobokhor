@@ -5,6 +5,7 @@
 <div class="loading">
   <BarLoader size="60" color="#008ffd" unit="px" duration="1s" />
   <div>در حال دریافت سفارشات</div>
+  <p>درصورت بالا بودن تعداد سفارشات، ممکن است این فرآیند کمی طول بکشد</p>
 </div>
 
 <style>
@@ -15,9 +16,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   .loading div {
     margin-top: 20px;
+  }
+
+  .loading p {
+    color: #616870;
+    line-height: 1.5;
+    margin-top: 12px;
   }
 </style>

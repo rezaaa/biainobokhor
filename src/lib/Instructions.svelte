@@ -29,7 +29,10 @@
   <h1>«دریافت گزارش حساب کاربری اسنپ‌فود»</h1>
   <div class="step">
     <span class="step-number">اول</span>
-    <p>آیکن بادمجان را بکشید و به نوار Bookmark کروم اضافه کنید</p>
+    <div>
+      <p>آیکن بادمجان را بکشید و به نوار Bookmark کروم اضافه کنید</p>
+      <span>درصورت نبود نوار Bookmark، از منوی View گزینه‌ی Always show bookmarks bar را انتخاب کنید</span>
+    </div>
     <a
       class="bookmark"
       title="Biainobokhor"
@@ -40,7 +43,7 @@
   <div class="step">
     <span class="step-number">دوم</span>
     <p>
-      سایت <a href="https://snappfood.ir/" target="_blank">اسنپ‌فود</a> را باز کنید
+      سایت <a href="https://snappfood.ir/" target="_blank" rel="nofollow">اسنپ‌فود</a> را باز کنید
       و وارد حساب کاربری خود شوید
     </p>
   </div>
@@ -54,6 +57,18 @@
     <input type="text" bind:value={token} placeholder="Paste the token" />
   </div>
   <Button text="شروع بررسی" click={startAnalyse} full color="black" />
+  <div class="privacy">
+    <h2>حریم شخصی و حفظ محرمانگی</h2>
+    <p>
+      این سرویس، هیچ‌یک از اطلاعات درخواستی از کاربر، مانند توکن و هیچ‌یک از اطلاعات دریافتی از سرویس اسنپ‌فود را ذخیره و نگه‌داری نمی‌کند و صرفا اقدام به نمایش اطلاعات می‌کند.
+    </p>
+    <p>
+      کاربر می‌تواند در هر زمانی اقدام به قطع اتصال این سرویس با اسنپ‌فود نماید.
+    </p>
+    <p>
+     روی این وب‌سایت از سرویس Google Analytics جهت شمارش تعداد کاربران و رویداد‌ها استفاده می‌شود.
+    </p>
+  </div>
 </div>
 <Logos />
 
@@ -72,7 +87,7 @@
     font-weight: bold;
     font-size: 22px;
   }
-
+  
   .step {
     padding: 16px;
     background-color: #fff;
@@ -88,8 +103,13 @@
     margin-bottom: 0;
   }
 
-  .step p {
+  .step > p, .step > div {
     flex: 1;
+  }
+
+  .step > div > span {
+    font-size: 14px;
+    color: #616870;
   }
 
   .step input {
@@ -120,7 +140,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 16px;
-    margin-left: 20px;
+    margin-left: 18px;
   }
 
   .bookmark {
@@ -134,5 +154,30 @@
     text-align: center;
     padding: 10px;
     margin-right: 10px;
+  }
+
+  .privacy {
+    margin-top: 80px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05);
+  }
+
+  .privacy h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .privacy p {
+    margin-bottom: 12px;
+  }
+
+  .privacy p:last-child {
+    margin-bottom: 0;
   }
 </style>

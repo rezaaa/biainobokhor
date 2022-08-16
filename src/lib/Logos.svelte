@@ -19,7 +19,7 @@
 <style>
   .wrapper {
     width: 720px;
-    margin: 120px auto 0;
+    margin: 80px auto 0;
     display: flex;
     align-items: center;
   }
