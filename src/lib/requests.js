@@ -39,7 +39,7 @@ export const getProfile = async () => {
     });
 };
 
-export const getOrders = async ({ page = 0, size = 250 } = {}) => {
+export const getOrders = async ({ page = 0, size = 500 } = {}) => {
   loadingState.update(() => true);
   return await fetch(
     `https://express-bib.apps.ir-thr-at1.arvan.run/snappfood/mobile/v1/order/reorder?page=${page}&size=${size}`,
@@ -63,7 +63,7 @@ export const getOrders = async ({ page = 0, size = 250 } = {}) => {
     .then((res) => {
       const newPage = page + 1;
       const result = res?.data;
-      const pages = Math.ceil(result?.count / result?.pageSize);
+      const pages = Math.floor(result?.count / result?.pageSize);
       ordersState.update((value) => {
         return {
           ...value,
