@@ -30,14 +30,14 @@
   <div class="step">
     <span class="step-number">اول</span>
     <div>
-      <p>آیکن بادمجان را بکشید و به نوار Bookmark کروم اضافه کنید</p>
+      <p>آیکن بادمجان را بکشید و به نوار Bookmark اضافه کنید</p>
       <span
         >درصورت نبود نوار Bookmark، از منوی Bookmarks گزینه‌ی Show Bookmarks Bar را انتخاب کنید</span
       >
     </div>
     <a
       class="bookmark"
-      title="Biainobokhor"
+      title="Biainobokhor" 
       target="_blank"
       href="javascript:(function()%7B(function()%20%7Bvar%20storage%20%3D%20localStorage.getItem('JWT')%3Bvar%20cookie%20%3D%20%60%3B%20%24%7Bdocument.cookie%7D%60.split(%60%3B%20jwt-access_token%3D%60)%3Bvar%20token%20%3D%20cookie.length%20%3D%3D%3D%202%20%3F%20cookie.pop().split('%3B').shift()%20%3A%20JSON.parse(storage%20%7C%7C%20%22%7B%7D%22).access_token%3Bnavigator.clipboard.writeText(token).then(()%3D%3E%7Balert(%22Token%20has%20been%20copied%20successfully%22)%3B%7D)%7D)()%7D)()"
       >🍆</a

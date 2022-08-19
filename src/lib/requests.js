@@ -1,9 +1,4 @@
-import {
-  viewState,
-  loadingState,
-  ordersState,
-  profileState,
-} from "./stores";
+import { viewState, loadingState, ordersState, profileState } from "./stores";
 
 export const getProfile = async () => {
   loadingState.update(() => true);
@@ -26,6 +21,8 @@ export const getProfile = async () => {
     })
     .catch((err) => {
       console.log({ err });
+      loadingState.update(() => false);
+      viewState.update(() => 0);
     })
     .then((res) => {
       const user = res?.data?.user;
@@ -36,6 +33,11 @@ export const getProfile = async () => {
         levelName: user?.levelName,
         cellphone: user?.cellphone,
       }));
+    })
+    .catch((err) => {
+      console.log({ err });
+      loadingState.update(() => false);
+      viewState.update(() => 0);
     });
 };
 
