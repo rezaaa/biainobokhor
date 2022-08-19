@@ -32,14 +32,14 @@
     <div>
       <p>آیکن بادمجان را بکشید و به نوار Bookmark کروم اضافه کنید</p>
       <span
-        >درصورت نبود نوار Bookmark، از منوی View گزینه‌ی Always show bookmarks
-        bar را انتخاب کنید</span
+        >درصورت نبود نوار Bookmark، از منوی Bookmarks گزینه‌ی Show Bookmarks Bar را انتخاب کنید</span
       >
     </div>
     <a
       class="bookmark"
       title="Biainobokhor"
-      href="javascript:(function()%7B(function()%7Bfunction%20getCookie(name)%20%7Bvar%20value%20%3D%20%60%3B%20%24%7Bdocument.cookie%7D%60%3Bvar%20parts%20%3D%20value.split(%60%3B%20%24%7Bname%7D%3D%60)%3Bif%20(parts.length%20%3D%3D%3D%202)%20return%20parts.pop().split('%3B').shift()%3B%7Dvar%20token%20%3D%20getCookie('jwt-access_token')%3Bif(token)%20%7Bnavigator.clipboard.writeText(token).then(function()%20%7Balert('Token%20has%20been%20copied%20successfully')%3B%7D%2C%20function(err)%20%7Bconsole.error('Async%3A%20Could%20not%20copy%20text%3A%20'%2C%20err)%3B%7D)%3B%7D%7D)()%7D)()"
+      target="_blank"
+      href="javascript:(function()%7B(function()%20%7Bvar%20storage%20%3D%20localStorage.getItem('JWT')%3Bvar%20cookie%20%3D%20%60%3B%20%24%7Bdocument.cookie%7D%60.split(%60%3B%20jwt-access_token%3D%60)%3Bvar%20token%20%3D%20cookie.length%20%3D%3D%3D%202%20%3F%20cookie.pop().split('%3B').shift()%20%3A%20JSON.parse(storage%20%7C%7C%20%22%7B%7D%22).access_token%3Bnavigator.clipboard.writeText(token).then(()%3D%3E%7Balert(%22Token%20has%20been%20copied%20successfully%22)%3B%7D)%7D)()%7D)()"
       >🍆</a
     >
   </div>
