@@ -15,8 +15,8 @@
   <div>در حال دریافت سفارشات</div>
   <p>درصورت بالا بودن تعداد سفارشات، ممکن است این فرآیند کمی طول بکشد</p>
   <p>
-    {`دریافت صفحه ${orders ? farsiNumber(orders?.currentPage + 1) : "-"} از ${
-      orders ? farsiNumber(orders?.pages + 1) : "-"
+    {`دریافت صفحه ${orders?.currentPage ? farsiNumber(orders?.currentPage + 1) : "-"} از ${
+      orders?.pages ? farsiNumber(orders?.pages + 1) : "-"
     }`}
   </p>
 </div>
