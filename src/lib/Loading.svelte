@@ -14,11 +14,13 @@
   <BarLoader size="60" color="#008ffd" unit="px" duration="1s" />
   <div>در حال دریافت سفارشات</div>
   <p>درصورت بالا بودن تعداد سفارشات، ممکن است این فرآیند کمی طول بکشد</p>
-  <p>
-    {`دریافت صفحه ${orders?.currentPage ? farsiNumber(orders?.currentPage + 1) : "-"} از ${
-      orders?.pages ? farsiNumber(orders?.pages + 1) : "-"
-    }`}
-  </p>
+  {#if orders?.currentPage > 0}
+    <p>
+      {`دریافت صفحه ${farsiNumber(orders?.currentPage + 1)} از ${farsiNumber(
+        orders?.pages + 1
+      )}`}
+    </p>
+  {/if}
 </div>
 
 <style>

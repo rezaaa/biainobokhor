@@ -355,6 +355,7 @@
       click={() => {
         localStorage.removeItem("token");
         viewState.update(() => 0);
+        ordersState.update(() => ({}));
         gtag && gtag('event', 'bib-logout');
       }}
     />
