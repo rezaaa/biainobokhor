@@ -1,5 +1,5 @@
 <script>
-  import { BarLoader } from 'svelte-loading-spinners';
+  import { BarLoader } from "svelte-loading-spinners";
   import { ordersState } from "./stores";
   import { farsiNumber } from "./utils";
 
@@ -14,7 +14,11 @@
   <BarLoader size="60" color="#008ffd" unit="px" duration="1s" />
   <div>در حال دریافت سفارشات</div>
   <p>درصورت بالا بودن تعداد سفارشات، ممکن است این فرآیند کمی طول بکشد</p>
-  <p>{`صفحه ${farsiNumber(orders?.currentPage + 1)} از ${farsiNumber(orders?.pages)}`}</p>
+  <p>
+    {`دریافت صفحه ${orders ? farsiNumber(orders?.currentPage + 1) : "-"} از ${
+      orders ? farsiNumber(orders?.pages + 1) : "-"
+    }`}
+  </p>
 </div>
 
 <style>
