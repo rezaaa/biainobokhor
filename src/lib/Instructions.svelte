@@ -34,6 +34,12 @@
     <span class="step-number">اول</span>
     <p>ابتدا کد زیر را کپی کنید</p>
     <input type="text" value="javascript:(function()%7B(function()%20%7Bvar%20storage%20%3D%20localStorage.getItem('JWT')%3Bvar%20cookie%20%3D%20%60%3B%20%24%7Bdocument.cookie%7D%60.split(%60%3B%20jwt-access_token%3D%60)%3Bvar%20token%20%3D%20cookie.length%20%3D%3D%3D%202%20%3F%20cookie.pop().split('%3B').shift()%20%3A%20JSON.parse(storage%20%7C%7C%20%22%7B%7D%22).access_token%3Bnavigator.clipboard.writeText(token).then(()%3D%3E%7Balert(%22Token%20has%20been%20copied%20successfully%22)%3B%7D)%7D)()%7D)()" readonly />
+    <a
+        class="bookmark"
+        title="Biainobokhor" 
+        href="javascript:(function()%7B(function()%20%7Bvar%20storage%20%3D%20localStorage.getItem('JWT')%3Bvar%20cookie%20%3D%20%60%3B%20%24%7Bdocument.cookie%7D%60.split(%60%3B%20jwt-access_token%3D%60)%3Bvar%20token%20%3D%20cookie.length%20%3D%3D%3D%202%20%3F%20cookie.pop().split('%3B').shift()%20%3A%20JSON.parse(storage%20%7C%7C%20%22%7B%7D%22).access_token%3Bnavigator.clipboard.writeText(token).then(()%3D%3E%7Balert(%22Token%20has%20been%20copied%20successfully%22)%3B%7D)%7D)()%7D)()"
+        >🍆</a
+      >
   </div>
   <div class="step">
     <span class="step-number">دوم</span>
@@ -63,7 +69,6 @@
       <a
         class="bookmark"
         title="Biainobokhor" 
-        target="_blank"
         href="javascript:(function()%7B(function()%20%7Bvar%20storage%20%3D%20localStorage.getItem('JWT')%3Bvar%20cookie%20%3D%20%60%3B%20%24%7Bdocument.cookie%7D%60.split(%60%3B%20jwt-access_token%3D%60)%3Bvar%20token%20%3D%20cookie.length%20%3D%3D%3D%202%20%3F%20cookie.pop().split('%3B').shift()%20%3A%20JSON.parse(storage%20%7C%7C%20%22%7B%7D%22).access_token%3Bnavigator.clipboard.writeText(token).then(()%3D%3E%7Balert(%22Token%20has%20been%20copied%20successfully%22)%3B%7D)%7D)()%7D)()"
         >🍆</a
       >
@@ -96,7 +101,8 @@
     color="black"
   />
   {#if isMobile}
-    <div class="step">
+    <div class="demoz">
+      <h2>راهنمای تصویری مرحله به مرحله</h2>
       <div style="position: relative; padding-bottom: 224%;height: 0;"><iframe title="" src="https://demoz.app/flow/62ffb767bf9c6b0027b6edcf/embed" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
     </div>
   {/if}
@@ -203,15 +209,23 @@
     margin-right: 10px;
   }
 
-  .privacy {
-    margin-top: 80px;
+  .demoz {
+    margin-top: 40px;
     padding: 16px;
     background-color: #fff;
     border-radius: 24px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 
-  .privacy h2 {
+  .privacy {
+    margin-top: 40px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .privacy h2, .demoz h2 {
     text-align: center;
     margin: 0;
     margin-bottom: 20px;
