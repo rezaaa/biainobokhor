@@ -1,11 +1,19 @@
 <script>
   import { BarLoader } from 'svelte-loading-spinners';
+  import { ordersState } from "./stores";
+
+  let orders;
+
+  ordersState.subscribe((value) => {
+    orders = value;
+  });
 </script>
 
 <div class="loading">
   <BarLoader size="60" color="#008ffd" unit="px" duration="1s" />
   <div>در حال دریافت سفارشات</div>
   <p>درصورت بالا بودن تعداد سفارشات، ممکن است این فرآیند کمی طول بکشد</p>
+  <p>{`صفحه ${orders?.currentPage} از ${orders?.pages} صفحه`}</p>
 </div>
 
 <style>

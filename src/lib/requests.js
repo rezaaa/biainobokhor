@@ -68,6 +68,7 @@ export const getOrders = async ({ page = 0, size = 250 } = {}) => {
         return {
           ...value,
           data: [...value?.data, ...result?.orders],
+          pages,
           currentPage: page,
         };
       });
