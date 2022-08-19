@@ -99,3 +99,22 @@ export function convertToRawEnglishNumber(value) {
 export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '٫');
 }
+
+export const getUserAgent = () => {
+  const userAgent = navigator.userAgent;
+  const isAndroid = () => Boolean(userAgent.match(/Android/i));
+  const isIos = () => Boolean(userAgent.match(/iPhone|iPad|iPod/i));
+  const isOpera = () => Boolean(userAgent.match(/Opera Mini/i));
+  const isWindows = () => Boolean(userAgent.match(/IEMobile/i));
+  const isSSR = () => Boolean(userAgent.match(/SSR/i));
+  const isMobile = () =>
+    Boolean(isAndroid() || isIos() || isOpera() || isWindows());
+  const isDesktop = () => Boolean(!isMobile());
+  return {
+    isMobile,
+    isDesktop,
+    isAndroid,
+    isIos,
+    isSSR,
+  };
+};
