@@ -14,9 +14,9 @@
   <BarLoader size="60" color="#008ffd" unit="px" duration="1s" />
   <div>در حال دریافت سفارشات</div>
   <p>درصورت بالا بودن تعداد سفارشات، ممکن است این فرآیند کمی طول بکشد</p>
-  {#if orders?.currentPage + 1 > 0}
+  {#if orders?.currentPage >= 0}
     <p>
-      {`دریافت صفحه ${farsiNumber(orders?.currentPage + 1)} از ${farsiNumber(
+      {`دریافت صفحه ${farsiNumber(orders?.currentPage + 2)} از ${farsiNumber(
         orders?.pages + 1
       )}`}
     </p>
