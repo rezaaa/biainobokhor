@@ -344,7 +344,10 @@
       className="modal-button"
       text="دانلود و اشتراک‌گذاری"
       color="black"
-      click={() => handleModal(true)}
+      click={() => {
+        handleModal(true);
+        gtag && gtag('event', 'download-open');
+      }}
     />
     <Button
       className="logout-button"
@@ -352,6 +355,7 @@
       click={() => {
         localStorage.removeItem("token");
         viewState.update(() => 0);
+        gtag && gtag('event', 'bib-logout');
       }}
     />
   </div>

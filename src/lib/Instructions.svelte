@@ -31,7 +31,10 @@
     <span class="step-number">اول</span>
     <div>
       <p>آیکن بادمجان را بکشید و به نوار Bookmark کروم اضافه کنید</p>
-      <span>درصورت نبود نوار Bookmark، از منوی View گزینه‌ی Always show bookmarks bar را انتخاب کنید</span>
+      <span
+        >درصورت نبود نوار Bookmark، از منوی View گزینه‌ی Always show bookmarks
+        bar را انتخاب کنید</span
+      >
     </div>
     <a
       class="bookmark"
@@ -43,8 +46,9 @@
   <div class="step">
     <span class="step-number">دوم</span>
     <p>
-      سایت <a href="https://snappfood.ir/" target="_blank" rel="nofollow">اسنپ‌فود</a> را باز کنید
-      و وارد حساب کاربری خود شوید
+      سایت <a href="https://snappfood.ir/" target="_blank" rel="nofollow"
+        >اسنپ‌فود</a
+      > را باز کنید و وارد حساب کاربری خود شوید
     </p>
   </div>
   <div class="step">
@@ -56,17 +60,28 @@
     <p>توکن کپی شده را در بخش زیر Paste کنید</p>
     <input type="text" bind:value={token} placeholder="Paste the token" />
   </div>
-  <Button text="شروع بررسی" click={startAnalyse} full color="black" />
+  <Button
+    text="شروع بررسی"
+    click={() => {
+      startAnalyse();
+      gtag && gtag("event", "bib-started");
+    }}
+    full
+    color="black"
+  />
   <div class="privacy">
     <h2>حریم شخصی و حفظ محرمانگی</h2>
     <p>
-      این سرویس، هیچ‌یک از اطلاعات درخواستی از کاربر، مانند توکن و هیچ‌یک از اطلاعات دریافتی از سرویس اسنپ‌فود را ذخیره و نگه‌داری نمی‌کند و صرفا اقدام به نمایش اطلاعات می‌کند.
+      این سرویس، هیچ‌یک از اطلاعات درخواستی از کاربر، مانند توکن و هیچ‌یک از
+      اطلاعات دریافتی از سرویس اسنپ‌فود را ذخیره و نگه‌داری نمی‌کند و صرفا اقدام
+      به نمایش اطلاعات می‌کند.
     </p>
     <p>
       کاربر می‌تواند در هر زمانی اقدام به قطع اتصال این سرویس با اسنپ‌فود نماید.
     </p>
     <p>
-     روی این وب‌سایت از سرویس Google Analytics جهت شمارش تعداد کاربران و رویداد‌ها استفاده می‌شود.
+      روی این وب‌سایت از سرویس Google Analytics جهت شمارش تعداد کاربران و
+      رویداد‌ها استفاده می‌شود.
     </p>
   </div>
 </div>
@@ -87,13 +102,13 @@
     font-weight: bold;
     font-size: 22px;
   }
-  
+
   .step {
     padding: 16px;
     background-color: #fff;
     border-radius: 24px;
     margin-bottom: 12px;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -103,7 +118,8 @@
     margin-bottom: 0;
   }
 
-  .step > p, .step > div {
+  .step > p,
+  .step > div {
     flex: 1;
   }
 
@@ -150,7 +166,7 @@
     width: 30px;
     background-color: rgb(239, 242, 245);
     border-radius: 16px;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
     text-align: center;
     padding: 10px;
     margin-right: 10px;
@@ -161,7 +177,7 @@
     padding: 16px;
     background-color: #fff;
     border-radius: 24px;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 
   .privacy h2 {

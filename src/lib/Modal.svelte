@@ -22,12 +22,19 @@
         .replace("image/jpeg", "image/octet-stream");
       a.download = name;
       a.click();
+      gtag && gtag("event", `download-action-${name}`);
     });
   }
 </script>
 
 <div class={`modal ${modalOpen ? "open" : ""}`}>
-  <span class="close" on:click={() => handleModal(false)}>بازگشت</span>
+  <span
+    class="close"
+    on:click={() => {
+      handleModal(false);
+      gtag && gtag("event", "download-close");
+    }}>بازگشت</span
+  >
   <h2>دانلود گزارش اسنپ‌فود</h2>
   <RadioButton
     value={theme}
