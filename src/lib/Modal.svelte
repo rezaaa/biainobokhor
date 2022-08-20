@@ -15,21 +15,12 @@
   export let handleTheme;
 
   function handleDownload(element, name) {
-    if(screen.width < 1024) {
-        document.getElementById("viewport").setAttribute("content", "width=1200px");
-    }
-    html2canvas(document.querySelector(`#${element}`), {
-      imageTimeout: 15000,
-      scale: 3
-    }).then((canvas) => {
+    html2canvas(document.querySelector(`#${element}`)).then((canvas) => {
       const a = document.createElement("a");
       a.href = canvas.toDataURL("image/jpg");
       a.download = name;
       a.click();
       gtag && gtag("event", `download-action-${name}`);
-      if(screen.width < 1024) {
-        document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1");
-      }
     });
   }
 </script>
