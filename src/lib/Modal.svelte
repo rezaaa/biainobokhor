@@ -15,9 +15,9 @@
   export let handleTheme;
 
   function handleDownload(element, name) {
-    html2canvas(document.querySelector(`#${element}`)).then((canvas) => {
+    html2canvas(document.querySelector(`#${element}`), {scale: 1}).then((canvas) => {
       const a = document.createElement("a");
-      a.href = canvas.toDataURL("image/jpg");
+      a.href = canvas.toDataURL("image/jpeg");
       a.download = name;
       a.click();
       gtag && gtag("event", `download-action-${name}`);
@@ -53,7 +53,7 @@
         text="دانلود"
         className="download-button"
         click={() =>
-          handleDownload("download1", "biainobokhor1.jpg")}
+          handleDownload("download1", "biainobokhor1.jpeg")}
       />
       <div class="crop">
         <Template1 preview={true} {profile} {reportDate} {cost} {theme} />
@@ -65,7 +65,7 @@
         text="دانلود"
         className="download-button"
         click={() =>
-          handleDownload("download2", "biainobokhor2.jpg")}
+          handleDownload("download2", "biainobokhor2.jpeg")}
       />
       <div class="crop">
         <Template2
