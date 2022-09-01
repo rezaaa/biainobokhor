@@ -193,6 +193,7 @@
     width: 100%;
     margin-top: 20px;
     background-color: #f2f4f6;
+    color: #19191b;
     border-radius: 24px;
     border: 1px solid transparent;
     height: 46px;
