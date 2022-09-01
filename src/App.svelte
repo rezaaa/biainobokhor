@@ -29,6 +29,7 @@
 
 <main>
   <Header />
+  <iframe class="github" src="https://ghbtns.com/github-btn.html?user=rezaaa&repo=biainobokhor&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
   <div class="inner">
     {#if pageLoading}
       <Loading />
@@ -51,9 +52,16 @@
     margin: 0 auto;
   }
 
+  .github {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+  }
+
   @media only screen and (max-device-width: 500px) {
     .inner {
       padding: 0 16px;
     }
+
   }
 </style>

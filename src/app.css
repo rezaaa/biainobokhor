@@ -16,18 +16,6 @@
   font-weight: bold;
 }
 
-/* @font-face {
-  font-family: peyda;
-  src: url('./assets/fonts/Vazirmatn-Light.woff2') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: peyda;
-  src: url('./assets/fonts/Vazirmatn-Regular.woff2') format('truetype');
-  font-weight: bold;
-} */
-
 :root {
   font-family: peyda;
   color: #19191b;
