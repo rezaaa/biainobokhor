@@ -8,9 +8,6 @@
   <a href="https://sazito.com" target="_blank">
     <img src={sazito} alt="فروشگاه ساز سازیتو" />
   </a>
-  <a href="https://demoz.app" target="_blank">
-    <img src={demoz} alt="interactive product demo builder" />
-  </a>
   <a href="https://instagram.ir" target="_blank">
     <img src={instagram} alt="generate movie stories" />
   </a>
