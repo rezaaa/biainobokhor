@@ -114,33 +114,6 @@
     full
     color="black"
   />
-  {#if isMobile}
-    <div class="demoz">
-      <h2>راهنمای تصویری مرحله به مرحله</h2>
-      <div style="position: relative; padding-bottom: 224%;height: 0;">
-        <iframe
-          title=""
-          src="https://demoz.app/flow/62ffb767bf9c6b0027b6edcf/embed"
-          frameborder="0"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-        />
-      </div>
-    </div>
-  {:else}
-    <div class="demoz">
-      <h2>راهنمای تصویری مرحله به مرحله</h2>
-      <div
-        style="position: relative; padding-bottom: calc(64% + 41px);height: 0;"
-      >
-        <iframe
-          title=""
-          src="https://demoz.app/flow/62ffc9e2bf9c6b0027b6f180/embed"
-          frameborder="0"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-        />
-      </div>
-    </div>
-  {/if}
   <div class="privacy">
     <h2>حریم شخصی و حفظ محرمانگی</h2>
     <p>
